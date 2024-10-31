@@ -166,3 +166,26 @@ a.secondary {
     filter: invert();
   }
 }
+
+.square {
+  margin-bottom: 5px;
+  width: 300px;
+  height: 100px;
+  background: #1a5cde;
+  border-radius: 10px;
+  text-align: center;
+  line-height: 100px;
+  font-family: 'Futura';
+  font-size: 48px;
+  color: white;
+}
+
+.squares {
+  width: 10%;
+  height: 100px;
+  line-height: 105px;
+  position: absolute;
+  left: 45%;
+  top: 10%;
+  transform: translateX(-45%);
+}
