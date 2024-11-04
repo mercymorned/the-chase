@@ -10,7 +10,8 @@ function Square({value}) {
 }
 
 function InputSquare() {
-  return <div className={styles.square}><input className={styles.squareinput}></input></div>
+  const id = useId();
+  return <div className={styles.square} id={id}><input className={styles.squareinput}></input></div>
 }
 
 
@@ -22,9 +23,9 @@ export default function HomePage() {
         <div className={styles.squares}>
           <Square />
           <Square />
-          <Square />
-          <Square />
-          <Square />
+          <InputSquare />
+          <InputSquare />
+          <InputSquare />
           <Square />
           <Square />
         </div>
