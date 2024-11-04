@@ -1,12 +1,18 @@
-import styles from "./page.module.css";
+'use client';
 
-function Square() {
-  return <div className={styles.square}></div>
+import styles from "./page.module.css";
+import { useState } from "react";
+import { useId } from "react";
+
+function Square({value}) {
+  const id = useId();
+  return <div className={styles.square} id={id}></div>
 }
 
 function InputSquare() {
   return <div className={styles.square}><input className={styles.squareinput}></input></div>
 }
+
 
 export default function HomePage() {
   return (
