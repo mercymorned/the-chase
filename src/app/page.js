@@ -22,10 +22,9 @@ export default function Home() {
           <div id="sq6" className={styles.square}></div>
         </div>
 
-        <div className={styles.ctas}>
-        </div>
       </main>
       <footer className={styles.footer}>
+      <p>Perhaps where the buttons will go.</p>
       </footer>
     </div>
   );
