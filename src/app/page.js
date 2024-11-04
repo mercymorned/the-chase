@@ -1,25 +1,27 @@
 import Image from "next/image";
 import styles from "./page.module.css";
 
-export default function Home() {
+function Square() {
+  return <div className={styles.square}></div>
+}
+
+function InputSquare() {
+  return <div className={styles.square}><input className={styles.squareinput}></input></div>
+}
+
+export default function HomePage() {
   return (
     <div className={styles.page}>
       <main className={styles.main}>
 
         <div className={styles.squares}>
-          <div id="sq0" className={styles.square}></div>
-          <div id="sq1" className={styles.square}>
-            <input id="sq1_i" className={styles.squareinput}></input>
-          </div>
-          <div id="sq2" className={styles.square}>
-          <input id="sq2_i" className={styles.squareinput}></input>
-          </div>
-          <div id="sq3" className={styles.square}>
-            <input id="sq3_i" className={styles.squareinput}></input>
-          </div>
-          <div id="sq4" className={styles.square}></div>
-          <div id="sq5" className={styles.square}></div>
-          <div id="sq6" className={styles.square}></div>
+          <Square />
+          <InputSquare />
+          <InputSquare />
+          <InputSquare />
+          <Square />
+          <Square />
+          <Square />
         </div>
 
         <div className={styles.ctas}>
