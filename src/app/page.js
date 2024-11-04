@@ -24,10 +24,9 @@ export default function HomePage() {
           <Square />
         </div>
 
-        <div className={styles.ctas}>
-        </div>
       </main>
       <footer className={styles.footer}>
+      <p>A place for me to put the buttons maybe.</p>
       </footer>
     </div>
   );
