@@ -1,4 +1,3 @@
-import Image from "next/image";
 import styles from "./page.module.css";
 
 function Square() {
@@ -16,9 +15,9 @@ export default function HomePage() {
 
         <div className={styles.squares}>
           <Square />
-          <InputSquare />
-          <InputSquare />
-          <InputSquare />
+          <Square />
+          <Square />
+          <Square />
           <Square />
           <Square />
           <Square />

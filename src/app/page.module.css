@@ -180,7 +180,7 @@ a.secondary {
   color: white;
 }
 
-.squares {
+/* .squares {
   width: 10%;
   height: 100px;
   line-height: 105px;
@@ -188,4 +188,18 @@ a.secondary {
   left: 45%;
   top: 10%;
   transform: translateX(-45%);
+} */
+
+.squareinput {
+  width:250px;
+  background: transparent;
+  border-radius: 0;
+  font-family: 'Futura';
+  font-size: 48px;
+  text-align: center;
+  color: white;
+  border-top-style: hidden;
+  border-right-style: hidden;
+  border-left-style: hidden;
+  border-bottom-style: hidden;
 }
