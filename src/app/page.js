@@ -1,6 +1,7 @@
 'use client';
 
 import styles from "./page.module.css";
+import StartButton from './start-button.js'
 import AdvancePlayerButton from './advance-player-button.js';
 import AdvanceChaserButton from './advance-chaser-button.js'
 import { useState } from "react";
@@ -12,7 +13,8 @@ function Bar({value}) {
 }
 
 function InputBar() {
-  return <div className={styles.square}><input className={styles.squareinput}></input></div>
+  const id = useId();
+  return <div className={styles.square} id={id}><input className={styles.squareinput}></input></div>
 }
 
 export default function HomePage() {
@@ -32,7 +34,7 @@ export default function HomePage() {
 
       </main>
       <footer className={styles.footer}>
-      <AdvancePlayerButton /> <AdvanceChaserButton />
+        <StartButton /> <AdvancePlayerButton /> <AdvanceChaserButton />
       </footer>
     </div>
   );

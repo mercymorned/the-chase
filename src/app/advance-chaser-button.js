@@ -1,5 +1,7 @@
 'use client';
 
+import styles from "./page.module.css";
+
 export default function AdvanceChaserButton() {
     function handleClick() {
         //determine if this is the first round, if so starting position is readct id ":R1bt7:"
@@ -11,5 +13,5 @@ export default function AdvanceChaserButton() {
         //set new position as current 
     }
 
-    return <button onClick={handleClick}>Advance Player 2</button>;
+    return <button className={styles.button} onClick={handleClick}>Advance Player 2</button>;
 }

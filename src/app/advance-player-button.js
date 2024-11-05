@@ -1,5 +1,7 @@
 'use client';
 
+import styles from "./page.module.css";
+
 export default function AdvancePlayerButton() {
     function handleClick() {
         
@@ -12,5 +14,5 @@ export default function AdvancePlayerButton() {
         //set new position as current 
     }
 
-    return <button onClick={handleClick}>Advance Player 1</button>;
+    return <button className={styles.button} onClick={handleClick}>Advance Player 1</button>;
 }
