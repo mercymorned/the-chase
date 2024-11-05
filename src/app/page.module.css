@@ -180,6 +180,32 @@ a.secondary {
   color: white;
 }
 
+.currentQuestion {
+  margin-bottom: 5px;
+  width: 300px;
+  height: 100px;
+  background: blueviolet;
+  border-radius: 10px;
+  text-align: center;
+  line-height: 100px;
+  font-family: 'Futura';
+  font-size: 48px;
+  color: white;
+}
+
+.wonQuestion {
+  margin-bottom: 5px;
+  width: 300px;
+  height: 100px;
+  background: orange;
+  border-radius: 10px;
+  text-align: center;
+  line-height: 100px;
+  font-family: 'Futura';
+  font-size: 48px;
+  color: white;
+}
+
 /* .squares {
   width: 10%;
   height: 100px;

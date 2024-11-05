@@ -7,7 +7,19 @@ import AdvanceChaserButton from './advance-chaser-button.js'
 import { useState } from "react";
 
 function Bar({value}) {
-  return <div className={styles.square}></div>
+  const [style, setStyle] = useState(styles.currentQuestion);
+
+  const changeStyle = () => {
+    if (style !== styles.currentQuestion) setStyle(styles.currentQuestion);
+    else setStyle(styles.wonQuestion);
+  };
+
+
+  return (
+  <div className={style}>
+    <button className={styles.button} onClick={changeStyle}>Click Me</button>
+  </div>
+  );
 }
 
 function InputBar() {
