@@ -5,17 +5,13 @@ import AdvancePlayerButton from './advance-player-button.js';
 import { useState } from "react";
 import { useId } from "react";
 
-function Square({value}) {
+function Bar({value}) {
   const id = useId();
   return <div className={styles.square} id={id}></div>
 }
 
-function InputSquare() {
+function InputBar() {
   return <div className={styles.square}><input className={styles.squareinput}></input></div>
-}
-
-function playerAdvance() {
-
 }
 
 export default function HomePage() {
@@ -24,13 +20,13 @@ export default function HomePage() {
       <main className={styles.main}>
 
         <div className={styles.squares}>
-          <Square />
-          <Square />
-          <Square />
-          <Square />
-          <Square />
-          <Square />
-          <Square />
+          <Bar />
+          <Bar />
+          <Bar />
+          <Bar />
+          <Bar />
+          <Bar />
+          <Bar />
         </div>
 
       </main>
