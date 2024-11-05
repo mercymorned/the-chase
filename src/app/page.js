@@ -2,6 +2,7 @@
 
 import styles from "./page.module.css";
 import AdvancePlayerButton from './advance-player-button.js';
+import AdvanceChaserButton from './advance-chaser-button.js'
 import { useState } from "react";
 import { useId } from "react";
 
@@ -31,7 +32,7 @@ export default function HomePage() {
 
       </main>
       <footer className={styles.footer}>
-      <AdvancePlayerButton />
+      <AdvancePlayerButton /> <AdvanceChaserButton />
       </footer>
     </div>
   );
