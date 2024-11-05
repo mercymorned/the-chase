@@ -11,5 +11,5 @@ export default function AdvanceChaserButton() {
         //set new position as current 
     }
 
-    return <button onClick={handleClick}>Advance Chaser</button>;
+    return <button onClick={handleClick}>Advance Player 2</button>;
 }

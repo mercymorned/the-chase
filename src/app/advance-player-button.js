@@ -12,5 +12,5 @@ export default function AdvancePlayerButton() {
         //set new position as current 
     }
 
-    return <button onClick={handleClick}>Advance Team</button>;
+    return <button onClick={handleClick}>Advance Player 1</button>;
 }
