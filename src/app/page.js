@@ -1,6 +1,7 @@
 'use client';
 
 import styles from "./page.module.css";
+import AdvancePlayerButton from './advance-player-button.js';
 import { useState } from "react";
 import { useId } from "react";
 
@@ -13,6 +14,9 @@ function InputSquare() {
   return <div className={styles.square}><input className={styles.squareinput}></input></div>
 }
 
+function playerAdvance() {
+
+}
 
 export default function HomePage() {
   return (
@@ -31,7 +35,7 @@ export default function HomePage() {
 
       </main>
       <footer className={styles.footer}>
-      <p>A place for me to put the buttons maybe.</p>
+      <AdvancePlayerButton />
       </footer>
     </div>
   );
