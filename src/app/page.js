@@ -1,9 +1,9 @@
 'use client';
 
 import styles from "./page.module.css";
-import StartButton from './start-button.js'
-import AdvancePlayerButton from './advance-player-button.js';
-import AdvanceChaserButton from './advance-chaser-button.js'
+import StartButton from './components/start-button.js'
+import AdvancePlayerButton from './components/advance-player-button.js';
+import AdvanceChaserButton from './components/advance-chaser-button.js'
 import { useState } from "react";
 
 function Bar({value}) {
