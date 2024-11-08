@@ -16,23 +16,22 @@ function Board() {
     { id: 4},
     { id: 5},
     { id: 6},
-    { id: 7},
+    { id: 7}
   ];
+
+
   return bars.map(bar =>
-    <div className={styles.squares}>
-    <Bar key={(bar.id)} />
-    </div>
+      <Bar key={(bar.id)} />
   );                   
 }
 
 export default function HomePage() {
-  const boardKey = [1];
 
   return (
     <div className={styles.page}>
       <main className={styles.main}>
 
-          <Board key={(boardKey)}/>
+          <Board />
 
       </main>
       <footer className={styles.footer}>
