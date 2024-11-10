@@ -6,12 +6,11 @@ import Board from '.././page.js';
 
 export default function AdvancePlayerButton() {
     const [style, setStyle] = useState(styles.currentQuestion);
-    let bars = Board()
-    console.log(bars)
 
   
     const changeStyle = () => {
       if (style !== styles.currentQuestion) setStyle(styles.currentQuestion);
+      if (style === styles.wonQuestion) setStyle(styles.chaser);
       else setStyle(styles.wonQuestion);
     };
 
