@@ -7,7 +7,7 @@
   --button-secondary-hover: #f2f2f2;
 
   display: grid;
-  grid-template-rows: 20px 1fr 20px 10px;
+  grid-template-rows: 10px 1fr 20px 10px;
   align-items: center;
   justify-items: center;
   min-height: 100svh;
@@ -30,7 +30,7 @@
 .main {
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  gap: 10px;
   grid-row-start: 2;
 }
 
@@ -163,6 +163,19 @@ a.secondary {
   width: 300px;
   height: 100px;
   background: orange;
+  border-radius: 10px;
+  text-align: center;
+  line-height: 100px;
+  font-family: 'Futura';
+  font-size: 48px;
+  color: white;
+}
+
+.chaser {
+  margin-bottom: 5px;
+  width: 300px;
+  height: 100px;
+  background: red;
   border-radius: 10px;
   text-align: center;
   line-height: 100px;

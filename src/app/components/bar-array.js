@@ -4,17 +4,18 @@ import { useState } from "react";
 import styles from ".././page.module.css";
 
 export default function Bar({id}) {
-    // const [style, setStyle] = useState(styles.currentQuestion);
+    const [style, setStyle] = useState(styles.currentQuestion);
   
-    // const changeStyle = () => {
-    //   if (style !== styles.currentQuestion) setStyle(styles.currentQuestion);
-    //   else setStyle(styles.wonQuestion);
-    // };
+    const changeStyle = () => {
+      if (style !== styles.currentQuestion) setStyle(styles.currentQuestion);
+      if (style === styles.wonQuestion) setStyle(styles.chaser);
+      else setStyle(styles.wonQuestion);
+    };
   
   
     return (
-    <div className={styles.square}> {id}
+    <button className={style} onClick={changeStyle}> {id}
       {/* <button className={styles.button} onClick={changeStyle}>Click Me</button> */}
-    </div>
+    </button>
     );
   }
