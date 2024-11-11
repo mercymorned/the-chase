@@ -6,6 +6,7 @@ import InputBar from "./components/input-bar.js";
 import StartButton from './components/start-button.js'
 import AdvancePlayerButton from './components/advance-player-button.js';
 import AdvanceChaserButton from './components/advance-chaser-button.js'
+import BoardWrapper from './context.js'
 import { useState } from "react";
 
 function Board() {
