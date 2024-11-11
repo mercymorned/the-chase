@@ -20,7 +20,7 @@ export default function Bar({id}) {
   
   
     return (
-    <div className={style} onClick={changeStyle}> {id}
+    <div className={style} onClick={changeStyle}>
       {/* <button className={styles.button} onClick={changeSelected}>Click Me</button> */}
     </div>
     );

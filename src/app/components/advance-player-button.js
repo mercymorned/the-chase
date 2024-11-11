@@ -1,19 +1,14 @@
 'use client';
 
-import { useState } from "react";
+import { useState, useContext } from "react";
 import styles from '.././page.module.css';
-import Board from '.././page.js';
+import useBoardContext from '.././context.js';
+
 
 export default function AdvancePlayerButton() {
-    const [style, setStyle] = useState(styles.currentQuestion);
+  const { name, setName } = useBoardContext();
 
-  
-    const changeStyle = () => {
-      if (style !== styles.currentQuestion) setStyle(styles.currentQuestion);
-      if (style === styles.wonQuestion) setStyle(styles.chaser);
-      else setStyle(styles.wonQuestion);
-    };
-
-
-  return <button className={styles.button} onClick={changeStyle}>Advance Player 1</button>;
+  return (
+      <button className={styles.button} onClick={({name}) => setName('Sash')}>Advance Player 1</button>
+);
 }
