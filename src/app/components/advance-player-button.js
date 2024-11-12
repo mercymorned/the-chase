@@ -9,6 +9,6 @@ export default function AdvancePlayerButton() {
   const { name, setName } = useBoardContext();
 
   return (
-      <button className={styles.button} onClick={({name}) => setName('Sash')}>Advance Player 1</button>
+      <button className={styles.button} onClick={({name}) => setName('Sash')}>Select Bar</button>
 );
 }

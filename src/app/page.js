@@ -16,8 +16,7 @@ function Board() {
     { id: 3},
     { id: 4},
     { id: 5},
-    { id: 6},
-    { id: 7}
+    { id: 6}
   ];
   
   return bars.map(bar =>
@@ -37,7 +36,7 @@ export default function HomePage() {
 
       </main>
       <footer className={styles.footer}>
-        <StartButton /> <AdvancePlayerButton /> <AdvanceChaserButton />
+        <StartButton /> <AdvancePlayerButton />
       </footer>
     </div>
   );
