@@ -25,12 +25,14 @@ function Board() {
 }
 
 export default function HomePage() {
+  const { name, setName } = useBoardContext();
 
   return (
     <div className={styles.page}>
       <main className={styles.main}>
 
           <Board />
+          {name}
 
       </main>
       <footer className={styles.footer}>
