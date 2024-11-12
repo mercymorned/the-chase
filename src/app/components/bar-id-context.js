@@ -2,21 +2,17 @@
 
 import { createContext, useContext, useState } from "react";
 
-const BoardContext = createContext(undefined);
+const BarContext = createContext(undefined);
 
-export function BoardWrapper({children}) {
-    let [name, setName] = useState('Ronan');
+export function BarWrapper({children}) {
 
     return (
-        <BoardContext.Provider value={{
-            name,
-            setName
-        }}>
+        <BarContext.Provider value={{id}}>
             {children}
-        </BoardContext.Provider>
+        </BarContext.Provider>
     )
 }
 
-export default function useBoardContext() {
-    return useContext(BoardContext);
+export default function useBarContext() {
+    return useContext(BarContext);
 }

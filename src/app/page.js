@@ -7,7 +7,7 @@ import StartButton from './components/start-button.js'
 import AdvancePlayerButton from './components/advance-player-button.js';
 import AdvanceChaserButton from './components/advance-chaser-button.js'
 import useBoardContext from './context.js'
-import { useState } from "react";
+import { useState, useRef } from "react";
 
 function Board() {
   const bars = [
@@ -25,14 +25,12 @@ function Board() {
 }
 
 export default function HomePage() {
-  const { name, setName } = useBoardContext();
 
   return (
     <div className={styles.page}>
       <main className={styles.main}>
 
           <Board />
-          {name}
 
       </main>
       <footer className={styles.footer}>
