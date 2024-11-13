@@ -5,7 +5,6 @@ import styles from ".././page.module.css";
 import {Board, barRef} from ".././page.js";
 
 export default function ChangeBar1({barRef}) {
-  bar1 = barRef{value=1}
 
     const [style, setStyle] = useState(styles.currentQuestion);
 
