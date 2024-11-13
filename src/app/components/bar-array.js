@@ -2,20 +2,16 @@
 import { useState } from "react";
 
 import styles from ".././page.module.css";
+import {Board, barRef} from ".././page.js"
 
-export default function Bar({id}) {
+export default function Bar({barRef}) {
     const [style, setStyle] = useState(styles.currentQuestion);
-    const [selected, setSelected] = useState('')
   
     const changeStyle = () => {
-      console.log({id});
+      console.log(barRef);
       if (style !== styles.currentQuestion) setStyle(styles.currentQuestion);
       if (style === styles.wonQuestion) setStyle(styles.chaser);
       else setStyle(styles.wonQuestion);
-    };
-
-    const changeSelected = () => {
-      console.log('bar ' + {id} + ' active!')
     };
   
   

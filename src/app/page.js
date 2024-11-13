@@ -10,6 +10,7 @@ import useBoardContext from './context.js'
 import { useState, useRef } from "react";
 
 function Board() {
+  const barRef = useRef(0);
   const bars = [
     { id: 1},
     { id: 2},
@@ -19,9 +20,10 @@ function Board() {
     { id: 6}
   ];
   
-  return bars.map(bar =>
-      <Bar key={(bar.id)} id={(bar.id)} />
-  );                   
+  return (
+    bars.map(bar =>
+      <Bar key={(bar.id)} id={(bar.id)} barRef={(bar.id)} />
+  ));                   
 }
 
 export default function HomePage() {

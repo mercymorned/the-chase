@@ -1,14 +1,16 @@
 'use client';
-import { useState } from "react";
+import { useState, useRef } from "react";
 
 import styles from ".././page.module.css";
-import Bar from ".././components/bar-array";
+import {Board, barRef} from ".././page.js";
 
-export default function ChangeBar1() {
+export default function ChangeBar1({barRef}) {
+  bar1 = barRef{value=1}
+
     const [style, setStyle] = useState(styles.currentQuestion);
 
-  
     const changeStyle = () => { 
+      console.log(barRef)
     setStyle(styles.currentQuestion);
       if (style === styles.wonQuestion) setStyle(styles.chaser);
       else setStyle(styles.wonQuestion);
