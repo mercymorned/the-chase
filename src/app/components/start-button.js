@@ -2,21 +2,24 @@
 import { useState, useRef } from "react";
 
 import styles from ".././page.module.css";
-import {Board, barRef} from ".././page.js";
+import { Board, bars, barRef } from ".././page.js";
+import Bar from "./bar-array";
 
-export default function ChangeBar1({barRef}) {
+export default function ChangeBar1() {
 
-    const [style, setStyle] = useState(styles.currentQuestion);
+    // const [style, setStyle] = useState(styles.currentQuestion);
 
-    const changeStyle = () => { 
-      console.log(barRef)
-    setStyle(styles.currentQuestion);
-      if (style === styles.wonQuestion) setStyle(styles.chaser);
-      else setStyle(styles.wonQuestion);
+    // const changeStyle = () => { 
+    // setStyle(styles.currentQuestion);
+    //   if (style === styles.wonQuestion) setStyle(styles.chaser);
+    //   else setStyle(styles.wonQuestion);
+    // };
+
+    const targetBar = () => {
     };
   
   
     return (
-      <button className={styles.button} onClick={changeStyle}>Click Me</button>
+      <button className={styles.button} onClick={targetBar}>Click Me</button>
     );
   }

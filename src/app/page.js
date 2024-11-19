@@ -9,7 +9,7 @@ import AdvanceChaserButton from './components/advance-chaser-button.js'
 import useBoardContext from './context.js'
 import { useState, useRef } from "react";
 
-function Board() {
+export function Board() {
   const barRef = useRef(0);
   const bars = [
     { id: 1},
