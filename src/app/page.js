@@ -12,12 +12,12 @@ import { useState, useRef } from "react";
 function Board() {
   const barRef = useRef(0);
   const bars = [
-    { id: 1},
-    { id: 2},
-    { id: 3},
-    { id: 4},
-    { id: 5},
-    { id: 6}
+    { id: 'bar1'},
+    { id: 'bar2'},
+    { id: 'bar3'},
+    { id: 'bar4'},
+    { id: 'bar5'},
+    { id: 'bar6'}
   ];
   
   return (
