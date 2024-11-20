@@ -10,7 +10,7 @@ import useBoardContext from './context.js'
 import { useState, useRef } from "react";
 
 function Board() {
-  const barRef = useRef(0);
+  const barRef = useRef(null);
   const bars = [
     { id: 'bar1'},
     { id: 'bar2'},
