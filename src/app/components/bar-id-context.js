@@ -1,7 +1,6 @@
 'use client';
 
 import { createContext, useContext, useRef } from "react";
-import {barRef} from '.././page.js'
 
 const BarContext = createContext(undefined);
 

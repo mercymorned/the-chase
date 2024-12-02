@@ -9,8 +9,8 @@ import AdvanceChaserButton from './components/advance-chaser-button.js'
 import useBoardContext from './context.js'
 import { useState, useRef } from "react";
 
-function Board() {
-  const barRef = useRef(null);
+export function Board() {
+  const barRef = useRef();
   const bars = [
     { id: 'bar1'},
     { id: 'bar2'},

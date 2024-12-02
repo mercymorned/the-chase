@@ -24,9 +24,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
       <BoardWrapper>
-        <BarWrapper>
         {children}
-        </BarWrapper>
         </BoardWrapper>
       </body>
     </html>

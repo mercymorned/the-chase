@@ -2,7 +2,7 @@
 import { useState } from "react";
 
 import styles from ".././page.module.css";
-import {Board, barRef} from ".././page.js"
+import barRef from ".././page.js"
 
 export default function Bar({barRef}) {
     const [style, setStyle] = useState(styles.currentQuestion);
