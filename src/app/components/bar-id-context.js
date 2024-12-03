@@ -1,14 +1,15 @@
 'use client';
 
-import { createContext, useContext, useRef } from "react";
+import { createContext, useContext, useState } from "react";
+import barID from './../page.js'
 
 const BarContext = createContext(undefined);
 
 export function BarWrapper({children}) {
-    const barID = barRef;
+    let [barNumber, setBarNumber] = useState({barID})
 
     return (
-        <BarContext.Provider value={{barID}}>
+        <BarContext.Provider value={{barNumber}}>
             {children}
         </BarContext.Provider>
     )
