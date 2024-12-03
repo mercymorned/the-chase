@@ -9,7 +9,10 @@ export function BarWrapper({children}) {
     let [barNumber, setBarNumber] = useState({barID})
 
     return (
-        <BarContext.Provider value={{barNumber}}>
+        <BarContext.Provider value={{
+            barNumber, 
+            setBarNumber
+            }}>
             {children}
         </BarContext.Provider>
     )
