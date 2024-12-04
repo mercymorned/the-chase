@@ -10,18 +10,26 @@ export function Board() {
   const [playerPosition, setPlayerPosition] = useState(4);
 
   const [bars, setBars] = useState([
-    { id: 1, occupied: false},
-    { id: 2, occupied: false},
-    { id: 3, occupied: true },
-    { id: 4, occupied: false },
-    { id: 5, occupied: false },
-    { id: 6, occupied: false }
+    { id: 1, playerOccupied: false, chaserOccupied: true},
+    { id: 2, playerOccupied: false, chaserOccupied: false },
+    { id: 3, playerOccupied: true, chaserOccupied: false },
+    { id: 4, playerOccupied: false, chaserOccupied: false },
+    { id: 5, playerOccupied: false, chaserOccupied: false },
+    { id: 6, playerOccupied: false, chaserOccupied: false }
   ]);
 
   const updatePlayerBars = (position, newOccupied) => {
     setBars(prevBars => {
       return prevBars.map(bar =>
-        bar.id === position ? { ...bar, occupied: newOccupied } : bar
+        bar.id === position ? { ...bar, playerOccupied: newOccupied } : bar
+      );
+    });
+  };
+
+  const updateChaserBars = (position, newOccupied) => {
+    setBars(prevBars => {
+      return prevBars.map(bar =>
+        bar.id === position ? { ...bar, chaserOccupied: newOccupied } : bar
       );
     });
   };
@@ -32,7 +40,7 @@ export function Board() {
   };
 
   const advanceChaser = () => {
-    updatePlayerBars(chaserPosition, true);
+    updateChaserBars(chaserPosition, true);
     setChaserPosition(chaserPosition + 1);
   };
 
@@ -41,7 +49,7 @@ export function Board() {
     <div className={styles.page}>
       <main className={styles.main}>
         {bars.map((bar, index) => (
-          <Bar key={(index)} barID={(bar.id)} isOccupied={(bar.occupied)} />
+          <Bar key={(index)} barID={(bar.id)} isPlayerOccupied={(bar.playerOccupied)} isChaserOccupied={(bar.chaserOccupied)} />
         ))}
       </main>
       <footer className={styles.footer}>

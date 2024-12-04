@@ -2,8 +2,8 @@
 
 import styles from ".././page.module.css";
 
-export default function Bar({barID, isOccupied}) {
-  const style = isOccupied ? styles.wonQuestion : styles.currentQuestion;
+export default function Bar({barID, isPlayerOccupied, isChaserOccupied}) {
+  const style = isPlayerOccupied ? styles.wonQuestion : styles.currentQuestion && isChaserOccupied ? styles.chaser : styles.currentQuestion;
 
   return (
     <div className={style}>{barID}</div>
