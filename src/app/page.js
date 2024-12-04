@@ -2,7 +2,7 @@
 
 import styles from "./page.module.css";
 import Bar from "./components/bar-array.js";
-import StartButton from './components/start-button.js'
+import MoveButton from './components/move-button.js'
 import { useState } from "react";
 
 export function Board() {
@@ -53,8 +53,8 @@ export function Board() {
         ))}
       </main>
       <footer className={styles.footer}>
-        <StartButton label="Advance player" onClickEvent={advancePlayer} />
-        <StartButton label="Advance chaser" onClickEvent={advanceChaser} />
+        <MoveButton label="Advance player" onClickEvent={advancePlayer} />
+        <MoveButton label="Advance chaser" onClickEvent={advanceChaser} />
       </footer>
     </div>
   );                   
