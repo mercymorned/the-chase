@@ -148,7 +148,7 @@ a.secondary {
   margin-bottom: 5px;
   width: 300px;
   height: 100px;
-  background: blueviolet;
+  background: #00a9bb;
   border-radius: 10px;
   text-align: center;
   line-height: 100px;
@@ -161,7 +161,7 @@ a.secondary {
   margin-bottom: 5px;
   width: 300px;
   height: 100px;
-  background: orange;
+  background: #00167c;
   border-radius: 10px;
   text-align: center;
   line-height: 100px;
@@ -174,7 +174,7 @@ a.secondary {
   margin-bottom: 5px;
   width: 300px;
   height: 100px;
-  background: red;
+  background: #660f06;
   border-radius: 10px;
   text-align: center;
   line-height: 100px;
@@ -209,14 +209,14 @@ a.secondary {
 
 .button {
   align-items: center;
-  background-color: #0A66C2;
+  background-color: #b4211a;
   border: 0;
   border-radius: 100px;
   box-sizing: border-box;
   color: #ffffff;
   cursor: pointer;
   display: inline-flex;
-  font-family: -apple-system, system-ui, system-ui, "Segoe UI", Roboto, "Helvetica Neue", "Fira Sans", Ubuntu, Oxygen, "Oxygen Sans", Cantarell, "Droid Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-family: geistSans;
   font-size: 16px;
   font-weight: 600;
   justify-content: center;

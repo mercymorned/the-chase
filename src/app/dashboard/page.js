@@ -2,7 +2,7 @@
 
 import styles from ".././page.module.css";
 import StartButton from '../components/move-button.js'
-import { Board, advancePlayer, advanceChaser } from "../page";
+import { Board } from "../page";
 
 export default function HomePage() {
 
