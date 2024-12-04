@@ -29,7 +29,7 @@ export function Board() {
   const updateChaserBars = (position, newOccupied) => {
     setBars(prevBars => {
       return prevBars.map(bar =>
-        bar.id === position ? { ...bar, chaserOccupied: newOccupied } : bar
+        bar.id === position ? { ...bar, chaserOccupied: newOccupied, playerOccupied: false } : bar
       );
     });
   };
