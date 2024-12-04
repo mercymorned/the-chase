@@ -10,9 +10,9 @@ export function Board() {
   const [playerPosition, setPlayerPosition] = useState(4);
 
   const [bars, setBars] = useState([
-    { id: 1, playerOccupied: false, chaserOccupied: true},
+    { id: 1, playerOccupied: false, chaserOccupied: false},
     { id: 2, playerOccupied: false, chaserOccupied: false },
-    { id: 3, playerOccupied: true, chaserOccupied: false },
+    { id: 3, playerOccupied: false, chaserOccupied: false },
     { id: 4, playerOccupied: false, chaserOccupied: false },
     { id: 5, playerOccupied: false, chaserOccupied: false },
     { id: 6, playerOccupied: false, chaserOccupied: false }
