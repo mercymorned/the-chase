@@ -216,7 +216,7 @@ a.secondary {
   color: #ffffff;
   cursor: pointer;
   display: inline-flex;
-  font-family: geistSans;
+  font-family: var(--font-geist-mono);
   font-size: 16px;
   font-weight: 600;
   justify-content: center;
