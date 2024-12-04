@@ -3,10 +3,10 @@
 import { createContext, useContext, useState } from "react";
 import barID from './../page.js'
 
-const BarContext = createContext(undefined);
+const BarContext = createContext();
 
 export function BarWrapper({children}) {
-    let [barNumber, setBarNumber] = useState({barID})
+    const [barNumber, setBarNumber] = useState(barID)
 
     return (
         <BarContext.Provider value={{

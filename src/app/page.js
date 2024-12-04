@@ -10,7 +10,7 @@ import useBarContext from './components/bar-id-context.js'
 import { useState } from "react";
 
 export function Board() {
-  const { barNumber, setBarNumber } = useBarContext();
+  const {barNumber, setBarNumber} = useBarContext;
 
   const bars = [
     { id: 'bar1'},
@@ -22,8 +22,8 @@ export function Board() {
   ];
 
   return (
-    bars.map((bar, index) =>
-      <Bar key={(index)} barID={(bar.id)} barNumber={(bar.id)} />
+    bars.map((bar, barNumber) =>
+      <Bar key={(bar.id)} barID={(bar.id)} barNumber={(bar.id)} />
   ));                   
 }
 
