@@ -3,10 +3,8 @@ import { useState } from "react";
 
 import styles from ".././page.module.css";
 import useBarContext from "./bar-id-context";
-// import barNumber from "../page.js"
 
-export default function Bar({barID}) {
-    const {barNumber, setBarNumber} = useBarContext();
+export default function Bar({barNumber}) {
     const [style, setStyle] = useState(styles.currentQuestion);
   
     const changeStyle = () => {
@@ -17,7 +15,7 @@ export default function Bar({barID}) {
     };
   
     return (
-    <div className={style} onClick={changeStyle}> {barID}
+    <div className={style} onClick={changeStyle}> {barNumber}
     </div>
     );
   }
