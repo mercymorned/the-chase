@@ -174,7 +174,7 @@ a.secondary {
   margin-bottom: 5px;
   width: 300px;
   height: 100px;
-  background: #660f06;
+  background: #b4211a;
   border-radius: 10px;
   text-align: center;
   line-height: 100px;
@@ -209,7 +209,7 @@ a.secondary {
 
 .button {
   align-items: center;
-  background-color: #b4211a;
+  background-color: #0158a7;
   border: 0;
   border-radius: 100px;
   box-sizing: border-box;
