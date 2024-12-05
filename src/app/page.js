@@ -7,7 +7,7 @@ import { useState } from "react";
 
 export function Board() {
   const [chaserPosition, setChaserPosition] = useState(1);
-  const [playerPosition, setPlayerPosition] = useState(4);
+  const [playerPosition, setPlayerPosition] = useState(4);//TODO: change this to something like playerStarting variable based on inputs
 
   const [bars, setBars] = useState([
     { id: 1, playerOccupied: false, chaserOccupied: false, isInput: false },

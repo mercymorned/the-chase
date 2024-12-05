@@ -152,7 +152,7 @@ a.secondary {
   border-radius: 10px;
   text-align: center;
   line-height: 100px;
-  font-family: 'Futura';
+  font-family: var(--font-geist-mono);
   font-size: 48px;
   color: white;
   pointer-events: none;
@@ -170,7 +170,7 @@ a.secondary {
   border-radius: 10px;
   text-align: center;
   line-height: 100px;
-  font-family: 'Futura';
+  font-family: var(--font-geist-mono);
   font-size: 48px;
   color: white;
   border-top-style: hidden;
@@ -187,7 +187,7 @@ a.secondary {
   border-radius: 10px;
   text-align: center;
   line-height: 100px;
-  font-family: 'Futura';
+  font-family: var(--font-geist-mono);
   font-size: 48px;
   color: white;
   border-top-style: hidden;
@@ -204,7 +204,7 @@ a.secondary {
   border-radius: 10px;
   text-align: center;
   line-height: 100px;
-  font-family: 'Futura';
+  font-family: var(--font-geist-mono);
   font-size: 48px;
   color: white;
     border-top-style: hidden;
