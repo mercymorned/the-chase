@@ -156,6 +156,10 @@ a.secondary {
   font-size: 48px;
   color: white;
   pointer-events: none;
+  border-top-style: hidden;
+  border-right-style: hidden;
+  border-left-style: hidden;
+  border-bottom-style: hidden;
 }
 
 .wonQuestion {
@@ -169,6 +173,10 @@ a.secondary {
   font-family: 'Futura';
   font-size: 48px;
   color: white;
+  border-top-style: hidden;
+  border-right-style: hidden;
+  border-left-style: hidden;
+  border-bottom-style: hidden;
 }
 
 .chaser {
@@ -182,6 +190,10 @@ a.secondary {
   font-family: 'Futura';
   font-size: 48px;
   color: white;
+  border-top-style: hidden;
+  border-right-style: hidden;
+  border-left-style: hidden;
+  border-bottom-style: hidden;
 }
 
 .inputBar {
@@ -195,6 +207,10 @@ a.secondary {
   font-family: 'Futura';
   font-size: 48px;
   color: white;
+    border-top-style: hidden;
+  border-right-style: hidden;
+  border-left-style: hidden;
+  border-bottom-style: hidden;
 }
 
 /* .squares {
