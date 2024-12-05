@@ -44,6 +44,10 @@ export function Board() {
     updateChaserBars(chaserPosition, true);
     setChaserPosition(chaserPosition + 1);
   };
+  
+  const selectBid = () => {
+
+  };
 
 
   return (
