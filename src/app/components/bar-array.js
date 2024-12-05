@@ -2,10 +2,10 @@
 
 import styles from ".././page.module.css";
 
-export default function Bar({barID, isPlayerOccupied, isChaserOccupied}) {
-  const style = isPlayerOccupied ? styles.wonQuestion : styles.currentQuestion && isChaserOccupied ? styles.chaser : styles.currentQuestion;
+export default function Bar({barID, isPlayerOccupied, isChaserOccupied, isInput}) {
+  const style = isPlayerOccupied ? styles.wonQuestion : styles.currentQuestion && isChaserOccupied ? styles.chaser : styles.currentQuestion && isInput ? styles.inputBar : styles.currentQuestion;
 
   return (
-    <div className={style}></div>
+    <input className={style}></input>
   );
 }

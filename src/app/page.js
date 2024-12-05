@@ -10,13 +10,13 @@ export function Board() {
   const [playerPosition, setPlayerPosition] = useState(4);
 
   const [bars, setBars] = useState([
-    { id: 1, playerOccupied: false, chaserOccupied: false },
-    { id: 2, playerOccupied: false, chaserOccupied: false },
-    { id: 3, playerOccupied: false, chaserOccupied: false },
-    { id: 4, playerOccupied: false, chaserOccupied: false },
-    { id: 5, playerOccupied: false, chaserOccupied: false },
-    { id: 6, playerOccupied: false, chaserOccupied: false },
-    { id: 7, playerOccupied: false, chaserOccupied: false }
+    { id: 1, playerOccupied: false, chaserOccupied: false, isInput: false },
+    { id: 2, playerOccupied: false, chaserOccupied: false, isInput: true },
+    { id: 3, playerOccupied: false, chaserOccupied: false, isInput: true },
+    { id: 4, playerOccupied: false, chaserOccupied: false, isInput: true },
+    { id: 5, playerOccupied: false, chaserOccupied: false, isInput: false },
+    { id: 6, playerOccupied: false, chaserOccupied: false, isInput: false },
+    { id: 7, playerOccupied: false, chaserOccupied: false, isInput: false }
   ]);
 
   const updatePlayerBars = (position, newOccupied) => {
@@ -50,7 +50,7 @@ export function Board() {
     <div className={styles.page}>
       <main className={styles.main}>
         {bars.map((bar, index) => (
-          <Bar key={(index)} barID={(bar.id)} isPlayerOccupied={(bar.playerOccupied)} isChaserOccupied={(bar.chaserOccupied)} />
+          <Bar key={(index)} barID={(bar.id)} isPlayerOccupied={(bar.playerOccupied)} isChaserOccupied={(bar.chaserOccupied)} isInput={(bar.isInput)} />
         ))}
       </main>
       <footer className={styles.footer}>

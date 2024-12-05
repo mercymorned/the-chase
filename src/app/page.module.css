@@ -155,6 +155,7 @@ a.secondary {
   font-family: 'Futura';
   font-size: 48px;
   color: white;
+  pointer-events: none;
 }
 
 .wonQuestion {
@@ -175,6 +176,19 @@ a.secondary {
   width: 300px;
   height: 100px;
   background: #b4211a;
+  border-radius: 10px;
+  text-align: center;
+  line-height: 100px;
+  font-family: 'Futura';
+  font-size: 48px;
+  color: white;
+}
+
+.inputBar {
+  margin-bottom: 5px;
+  width: 300px;
+  height: 100px;
+  background: #00a9bb;
   border-radius: 10px;
   text-align: center;
   line-height: 100px;
