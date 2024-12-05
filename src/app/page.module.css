@@ -206,11 +206,15 @@ a.secondary {
   line-height: 100px;
   font-family: var(--font-geist-mono);
   font-size: 48px;
+  text-shadow: 2px 2px black;
   color: white;
-    border-top-style: hidden;
+  border-top-style: hidden;
   border-right-style: hidden;
   border-left-style: hidden;
   border-bottom-style: hidden;
+}
+.inputBar:focus {
+  background-color: #00167c;
 }
 
 /* .squares {
