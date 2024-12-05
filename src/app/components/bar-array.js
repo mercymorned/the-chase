@@ -13,6 +13,6 @@ export default function Bar({barID, isPlayerOccupied, isChaserOccupied, isInput}
   }
 
   return (
-    <input className={style} value={startingBid} onChange={ bidOnChange }></input>
+    <input className={style} value={startingBid} onChange={ bidOnChange } ></input>
   );
 }

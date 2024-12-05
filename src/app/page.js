@@ -7,7 +7,7 @@ import { useState } from "react";
 
 export function Board() {
   const [chaserPosition, setChaserPosition] = useState(1);
-  const [playerPosition, setPlayerPosition] = useState(4);//TODO: change this to something like playerStartingBid variable based on inputs
+  let [playerPosition, setPlayerPosition] = useState(3);
 
   const [bars, setBars] = useState([
     { id: 1, playerOccupied: false, chaserOccupied: false, isInput: false, isStartingBid: false },
@@ -38,6 +38,7 @@ export function Board() {
   const advancePlayer = () => {
     updatePlayerBars(playerPosition, true);
     setPlayerPosition(playerPosition + 1);
+    console.log()
   };
 
   const advanceChaser = () => {
@@ -45,8 +46,14 @@ export function Board() {
     setChaserPosition(chaserPosition + 1);
   };
   
-  const selectBid = () => {
+  const selectHighBid = () => {
+    updatePlayerBars(playerPosition, false);
+    setPlayerPosition(playerPosition - 1);
+  };
 
+  const selectLowBid = () => {
+    updatePlayerBars(playerPosition, false);
+    setPlayerPosition(playerPosition + 1);
   };
 
 
@@ -58,8 +65,10 @@ export function Board() {
         ))}
       </main>
       <footer className={styles.footer}>
-        <MoveButton label="Advance player" onClickEvent={advancePlayer} />
-        <MoveButton label="Advance chaser" onClickEvent={advanceChaser} />
+        <MoveButton label="Start with High Bid" onClickEvent={selectHighBid} />
+        <MoveButton label="Start with Low Bid" onClickEvent={selectLowBid} />
+        <MoveButton label="Advance Player" onClickEvent={advancePlayer} />
+        <MoveButton label="Advance Chaser" onClickEvent={advanceChaser} />
       </footer>
     </div>
   );                   
