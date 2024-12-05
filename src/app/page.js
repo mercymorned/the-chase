@@ -7,16 +7,16 @@ import { useState } from "react";
 
 export function Board() {
   const [chaserPosition, setChaserPosition] = useState(1);
-  const [playerPosition, setPlayerPosition] = useState(4);//TODO: change this to something like playerStarting variable based on inputs
+  const [playerPosition, setPlayerPosition] = useState(4);//TODO: change this to something like playerStartingBid variable based on inputs
 
   const [bars, setBars] = useState([
-    { id: 1, playerOccupied: false, chaserOccupied: false, isInput: false },
-    { id: 2, playerOccupied: false, chaserOccupied: false, isInput: true },
-    { id: 3, playerOccupied: false, chaserOccupied: false, isInput: true },
-    { id: 4, playerOccupied: false, chaserOccupied: false, isInput: true },
-    { id: 5, playerOccupied: false, chaserOccupied: false, isInput: false },
-    { id: 6, playerOccupied: false, chaserOccupied: false, isInput: false },
-    { id: 7, playerOccupied: false, chaserOccupied: false, isInput: false }
+    { id: 1, playerOccupied: false, chaserOccupied: false, isInput: false, isStartingBid: false },
+    { id: 2, playerOccupied: false, chaserOccupied: false, isInput: true, isStartingBid: false },
+    { id: 3, playerOccupied: false, chaserOccupied: false, isInput: true, isStartingBid: false },
+    { id: 4, playerOccupied: false, chaserOccupied: false, isInput: true, isStartingBid: false },
+    { id: 5, playerOccupied: false, chaserOccupied: false, isInput: false, isStartingBid: false },
+    { id: 6, playerOccupied: false, chaserOccupied: false, isInput: false, isStartingBid: false },
+    { id: 7, playerOccupied: false, chaserOccupied: false, isInput: false, isStartingBid: false }
   ]);
 
   const updatePlayerBars = (position, newOccupied) => {
@@ -50,7 +50,7 @@ export function Board() {
     <div className={styles.page}>
       <main className={styles.main}>
         {bars.map((bar, index) => (
-          <Bar key={(index)} barID={(bar.id)} isPlayerOccupied={(bar.playerOccupied)} isChaserOccupied={(bar.chaserOccupied)} isInput={(bar.isInput)} />
+          <Bar key={(index)} barID={(bar.id)} isPlayerOccupied={(bar.playerOccupied)} isChaserOccupied={(bar.chaserOccupied)} isInput={(bar.isInput)} isStartingBid={(bar.isStartingBid)} />
         ))}
       </main>
       <footer className={styles.footer}>
