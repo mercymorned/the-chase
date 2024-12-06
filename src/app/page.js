@@ -8,15 +8,16 @@ import { useState } from "react";
 export function Board() {
   const [chaserPosition, setChaserPosition] = useState(1);
   let [playerPosition, setPlayerPosition] = useState(3);
+  let [startingBidPosition, setStartingBidPosition] = useState(3);
 
   const [bars, setBars] = useState([
-    { id: 1, playerOccupied: false, chaserOccupied: false, isInput: false, isStartingBid: false },
-    { id: 2, playerOccupied: false, chaserOccupied: false, isInput: true, isStartingBid: false },
-    { id: 3, playerOccupied: false, chaserOccupied: false, isInput: true, isStartingBid: false },
-    { id: 4, playerOccupied: false, chaserOccupied: false, isInput: true, isStartingBid: false },
-    { id: 5, playerOccupied: false, chaserOccupied: false, isInput: false, isStartingBid: false },
-    { id: 6, playerOccupied: false, chaserOccupied: false, isInput: false, isStartingBid: false },
-    { id: 7, playerOccupied: false, chaserOccupied: false, isInput: false, isStartingBid: false }
+    { id: 1, playerOccupied: false, chaserOccupied: false, isInput: false, startingBid: false },
+    { id: 2, playerOccupied: false, chaserOccupied: false, isInput: true, startingBid: false },
+    { id: 3, playerOccupied: false, chaserOccupied: false, isInput: true, startingBid: false },
+    { id: 4, playerOccupied: false, chaserOccupied: false, isInput: true, startingBid: false },
+    { id: 5, playerOccupied: false, chaserOccupied: false, isInput: false, startingBid: false },
+    { id: 6, playerOccupied: false, chaserOccupied: false, isInput: false, startingBid: false },
+    { id: 7, playerOccupied: false, chaserOccupied: false, isInput: false, startingBid: false }
   ]);
 
   const updatePlayerBars = (position, newOccupied) => {
@@ -35,6 +36,14 @@ export function Board() {
     });
   };
 
+  const setAsStartingBidBar = (position, newOccupied) => {
+    setBars(prevBars => {
+      return prevBars.map(bar =>
+        bar.id === position ? { ...bar, startingBid: newOccupied } : bar
+      );
+    });
+  };
+
   const advancePlayer = () => {
     updatePlayerBars(playerPosition, true);
     setPlayerPosition(playerPosition + 1);
@@ -49,11 +58,22 @@ export function Board() {
   const selectHighBid = () => {
     updatePlayerBars(playerPosition, false);
     setPlayerPosition(playerPosition - 1);
+    setAsStartingBidBar((startingBidPosition - 1), true);
+    setStartingBidPosition(startingBidPosition - 1);
+  };
+
+  const selectMiddleBid = () => {
+    updatePlayerBars(playerPosition, false);
+    setPlayerPosition(playerPosition);
+    setAsStartingBidBar((startingBidPosition), true);
+    setStartingBidPosition(startingBidPosition);
   };
 
   const selectLowBid = () => {
     updatePlayerBars(playerPosition, false);
     setPlayerPosition(playerPosition + 1);
+    setAsStartingBidBar((startingBidPosition + 1), true);
+    setStartingBidPosition(startingBidPosition + 1);
   };
 
 
@@ -61,11 +81,12 @@ export function Board() {
     <div className={styles.page}>
       <main className={styles.main}>
         {bars.map((bar, index) => (
-          <Bar key={(index)} barID={(bar.id)} isPlayerOccupied={(bar.playerOccupied)} isChaserOccupied={(bar.chaserOccupied)} isInput={(bar.isInput)} isStartingBid={(bar.isStartingBid)} />
+          <Bar key={(index)} barID={(bar.id)} isPlayerOccupied={(bar.playerOccupied)} isChaserOccupied={(bar.chaserOccupied)} isInput={(bar.isInput)} startingBid={(bar.startingBid)} />
         ))}
       </main>
       <footer className={styles.footer}>
         <MoveButton label="Start with High Bid" onClickEvent={selectHighBid} />
+        <MoveButton label="Start with Middle Bid" onClickEvent={selectMiddleBid} />
         <MoveButton label="Start with Low Bid" onClickEvent={selectLowBid} />
         <MoveButton label="Advance Player" onClickEvent={advancePlayer} />
         <MoveButton label="Advance Chaser" onClickEvent={advanceChaser} />
