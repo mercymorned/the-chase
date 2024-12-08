@@ -9,6 +9,10 @@ export function Board() {
   const [chaserPosition, setChaserPosition] = useState(1);
   let [playerPosition, setPlayerPosition] = useState(3);
   let [startingBidPosition, setStartingBidPosition] = useState(3);
+  let [bidValue, setBidValue] = useState(null);
+  const updateBidValue = (newValue) => {
+    setBidValue(newValue);
+  }
 
   const [bars, setBars] = useState([
     { id: 1, playerOccupied: false, chaserOccupied: false, isInput: false, startingBid: false },
@@ -81,7 +85,7 @@ export function Board() {
     <div className={styles.page}>
       <main className={styles.main}>
         {bars.map((bar, index) => (
-          <Bar key={(index)} barID={(bar.id)} isPlayerOccupied={(bar.playerOccupied)} isChaserOccupied={(bar.chaserOccupied)} isInput={(bar.isInput)} startingBid={(bar.startingBid)} />
+          <Bar key={(index)} barID={(bar.id)} isPlayerOccupied={(bar.playerOccupied)} isChaserOccupied={(bar.chaserOccupied)} isInput={(bar.isInput)} startingBid={(bar.startingBid)} value={updateBidValue} />
         ))}
       </main>
       <footer className={styles.footer}>
