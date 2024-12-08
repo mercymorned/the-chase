@@ -9,18 +9,15 @@ export function Board() {
   const [chaserPosition, setChaserPosition] = useState(1);
   let [playerPosition, setPlayerPosition] = useState(3);
   let [startingBidPosition, setStartingBidPosition] = useState(3);
-  const highBid = useRef(null);
-  const midBid = useRef(null);
-  const lowBid = useRef(null);
 
   const [bars, setBars] = useState([
-    { id: 1, playerOccupied: false, chaserOccupied: false, isInput: false, startingBid: false, ref: '' },
-    { id: 2, playerOccupied: false, chaserOccupied: false, isInput: true, startingBid: false, ref: highBid },
-    { id: 3, playerOccupied: false, chaserOccupied: false, isInput: true, startingBid: false, ref: midBid },
-    { id: 4, playerOccupied: false, chaserOccupied: false, isInput: true, startingBid: false, ref: lowBid },
-    { id: 5, playerOccupied: false, chaserOccupied: false, isInput: false, startingBid: false, ref: '' },
-    { id: 6, playerOccupied: false, chaserOccupied: false, isInput: false, startingBid: false, ref:'' },
-    { id: 7, playerOccupied: false, chaserOccupied: false, isInput: false, startingBid: false, ref: '' }
+    { id: 1, playerOccupied: false, chaserOccupied: false, isInput: false, startingBid: false, bidAmount: '' },
+    { id: 2, playerOccupied: false, chaserOccupied: false, isInput: true, startingBid: false, bidAmount: '' },
+    { id: 3, playerOccupied: false, chaserOccupied: false, isInput: true, startingBid: false, bidAmount: '' },
+    { id: 4, playerOccupied: false, chaserOccupied: false, isInput: true, startingBid: false, bidAmount: '' },
+    { id: 5, playerOccupied: false, chaserOccupied: false, isInput: false, startingBid: false, bidAmount: '' },
+    { id: 6, playerOccupied: false, chaserOccupied: false, isInput: false, startingBid: false, bidAmount:'' },
+    { id: 7, playerOccupied: false, chaserOccupied: false, isInput: false, startingBid: false, bidAmount: '' }
   ]);
 
   const updatePlayerBars = (position, newOccupied) => {
@@ -63,9 +60,6 @@ export function Board() {
     setPlayerPosition(playerPosition - 1);
     setAsStartingBidBar((startingBidPosition - 1), true);
     setStartingBidPosition(startingBidPosition - 1);
-    midBid.input.value= '';
-    lowBid.input.value = '';
-    console.log(highBid.startingBid);
   };
 
   const selectMiddleBid = () => {
@@ -83,11 +77,12 @@ export function Board() {
   };
 
 
+
   return (
     <div className={styles.page}>
       <main className={styles.main}>
         {bars.map((bar, index) => (
-          <Bar key={(index)} barID={(bar.id)} isPlayerOccupied={(bar.playerOccupied)} isChaserOccupied={(bar.chaserOccupied)} isInput={(bar.isInput)} startingBid={(bar.startingBid)} ref={(bar.ref)} />
+          <Bar key={(index)} barID={(bar.id)} isPlayerOccupied={(bar.playerOccupied)} isChaserOccupied={(bar.chaserOccupied)} isInput={(bar.isInput)} startingBid={(bar.startingBid)} childData={(bar.childData)} />
         ))}
       </main>
       <footer className={styles.footer}>
