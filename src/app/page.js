@@ -11,13 +11,13 @@ export function Board() {
   let [startingBidPosition, setStartingBidPosition] = useState(3);
 
   const [bars, setBars] = useState([
-    { id: 1, playerOccupied: false, chaserOccupied: false, isInput: false, startingBid: false, bidAmount: '' },
-    { id: 2, playerOccupied: false, chaserOccupied: false, isInput: true, startingBid: false, bidAmount: '' },
-    { id: 3, playerOccupied: false, chaserOccupied: false, isInput: true, startingBid: false, bidAmount: '' },
-    { id: 4, playerOccupied: false, chaserOccupied: false, isInput: true, startingBid: false, bidAmount: '' },
-    { id: 5, playerOccupied: false, chaserOccupied: false, isInput: false, startingBid: false, bidAmount: '' },
-    { id: 6, playerOccupied: false, chaserOccupied: false, isInput: false, startingBid: false, bidAmount:'' },
-    { id: 7, playerOccupied: false, chaserOccupied: false, isInput: false, startingBid: false, bidAmount: '' }
+    { id: 1, playerOccupied: false, chaserOccupied: false, isInput: false, startingBid: false },
+    { id: 2, playerOccupied: false, chaserOccupied: false, isInput: true, startingBid: false},
+    { id: 3, playerOccupied: false, chaserOccupied: false, isInput: true, startingBid: false },
+    { id: 4, playerOccupied: false, chaserOccupied: false, isInput: true, startingBid: false },
+    { id: 5, playerOccupied: false, chaserOccupied: false, isInput: false, startingBid: false },
+    { id: 6, playerOccupied: false, chaserOccupied: false, isInput: false, startingBid: false },
+    { id: 7, playerOccupied: false, chaserOccupied: false, isInput: false, startingBid: false }
   ]);
 
   const updatePlayerBars = (position, newOccupied) => {
@@ -47,7 +47,6 @@ export function Board() {
   const advancePlayer = () => {
     updatePlayerBars(playerPosition, true);
     setPlayerPosition(playerPosition + 1);
-    console.log()
   };
 
   const advanceChaser = () => {
@@ -82,7 +81,7 @@ export function Board() {
     <div className={styles.page}>
       <main className={styles.main}>
         {bars.map((bar, index) => (
-          <Bar key={(index)} barID={(bar.id)} isPlayerOccupied={(bar.playerOccupied)} isChaserOccupied={(bar.chaserOccupied)} isInput={(bar.isInput)} startingBid={(bar.startingBid)} childData={(bar.childData)} />
+          <Bar key={(index)} barID={(bar.id)} isPlayerOccupied={(bar.playerOccupied)} isChaserOccupied={(bar.chaserOccupied)} isInput={(bar.isInput)} startingBid={(bar.startingBid)} />
         ))}
       </main>
       <footer className={styles.footer}>

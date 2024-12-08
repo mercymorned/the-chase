@@ -6,13 +6,13 @@ import { useState } from "react";
 export default function Bar({barID, isPlayerOccupied, isChaserOccupied, isInput}) {
   const style = isPlayerOccupied ? styles.wonQuestion : styles.currentQuestion && isChaserOccupied ? styles.chaser : styles.currentQuestion && isInput ? styles.inputBar : styles.currentQuestion;
 
-  const [startingBid, setStartingBid] = useState('');
+  let [bidEnteredAmount, setBidEnteredAmount] = useState('');
 
   const bidOnChange = (e) => {
-    setStartingBid(e.target.value);
+    setBidEnteredAmount(e.target.value);
   }
 
   return (
-    <input className={style} value={startingBid} onChange={ bidOnChange } ></input>
+    <input className={style} value={bidEnteredAmount} onChange={ bidOnChange } ></input>
   );
 }
