@@ -10,9 +10,15 @@ export function Board() {
   let [playerPosition, setPlayerPosition] = useState(3);
   let [startingBidPosition, setStartingBidPosition] = useState(3);
 
+  const [dataFromChild, setDataFromChild] = useState('default value');
+
+  function handleDataFromChild(bidEnteredAmount) {
+    setDataFromChild(bidEnteredAmount);
+  }
+
   const [bars, setBars] = useState([
-    { id: 1, playerOccupied: false, chaserOccupied: false, isInput: false, startingBid: false },
-    { id: 2, playerOccupied: false, chaserOccupied: false, isInput: true, startingBid: false},
+    { id: 1, playerOccupied: false, chaserOccupied: false, isInput: false, startingBid: false, value: {dataFromChild} },
+    { id: 2, playerOccupied: false, chaserOccupied: false, isInput: true, startingBid: false, value: {dataFromChild} },
     { id: 3, playerOccupied: false, chaserOccupied: false, isInput: true, startingBid: false },
     { id: 4, playerOccupied: false, chaserOccupied: false, isInput: true, startingBid: false },
     { id: 5, playerOccupied: false, chaserOccupied: false, isInput: false, startingBid: false },
@@ -66,6 +72,7 @@ export function Board() {
     setPlayerPosition(playerPosition);
     setAsStartingBidBar((startingBidPosition), true);
     setStartingBidPosition(startingBidPosition);
+    clearHighBid();
   };
 
   const selectLowBid = () => {
@@ -81,7 +88,7 @@ export function Board() {
     <div className={styles.page}>
       <main className={styles.main}>
         {bars.map((bar, index) => (
-          <Bar key={(index)} barID={(bar.id)} isPlayerOccupied={(bar.playerOccupied)} isChaserOccupied={(bar.chaserOccupied)} isInput={(bar.isInput)} startingBid={(bar.startingBid)} />
+          <Bar key={(index)} barID={(bar.id)} isPlayerOccupied={(bar.playerOccupied)} isChaserOccupied={(bar.chaserOccupied)} isInput={(bar.isInput)} startingBid={(bar.startingBid)} sendDataToParent={handleDataFromChild} />
         ))}
       </main>
       <footer className={styles.footer}>
