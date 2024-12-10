@@ -32,6 +32,7 @@
   flex-direction: column;
   gap: 1px;
   grid-row-start: 2;
+  align-items: center;
 }
 
 .main ol {
@@ -132,18 +133,6 @@ a.secondary {
   }
 }
 
-.square {
-  margin-bottom: 10px;
-  width: 300px;
-  height: 100px;
-  background: #e5a0c6;
-  border-radius: 10px;
-  text-align: center;
-  font-family: 'Futura';
-  font-size: 48px;
-  color: white;
-}
-
 .currentQuestion {
   margin-bottom: 5px;
   width: 300px;
@@ -215,6 +204,10 @@ a.secondary {
 }
 .inputBar:focus {
   background-color: #00167c;
+}
+
+#1 {
+  width: 600px;
 }
 
 /* .squares {
