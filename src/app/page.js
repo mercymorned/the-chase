@@ -66,7 +66,6 @@ export function Board() {
     setPlayerPosition(playerPosition);
     setAsStartingBidBar((startingBidPosition), true);
     setStartingBidPosition(startingBidPosition);
-    clearHighBid();
   };
 
   const selectLowBid = () => {
