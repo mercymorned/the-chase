@@ -79,6 +79,9 @@ export function Board() {
 
   return (
     <div className={styles.page}>
+      <header className={styles.header}>
+      <div>Welcome to The Chase!</div>
+      </header>
       <main className={styles.main}>
         {bars.map((bar, index) => (
           <Bar key={(index)} barID={(bar.id)} isPlayerOccupied={(bar.playerOccupied)} isChaserOccupied={(bar.chaserOccupied)} isInput={(bar.isInput)} startingBid={(bar.startingBid)} />
