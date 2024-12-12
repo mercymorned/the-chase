@@ -7,7 +7,7 @@
   --button-secondary-hover: #f2f2f2;
 
   display: grid;
-  grid-template-rows: 100px 1fr 230px;
+  grid-template-rows: 120px 1fr 230px;
   align-items: center;
   justify-items: center;
   min-height: 100svh;
@@ -34,7 +34,7 @@
   grid-row-start: 1;
   align-items: center;
   text-align: center;
-  line-height: 100px;
+  line-height: 50px;
   font-family: var(--font-geist-mono);
   font-size: 48px;
   text-shadow: 2px 2px black;
@@ -44,23 +44,9 @@
 .main {
   display: flex;
   flex-direction: column;
-  gap: 1px;
+  gap: 0;
   grid-row-start: 2;
   align-items: center;
-}
-
-.main ol {
-  font-family: var(--font-geist-mono);
-  padding-left: 0;
-  margin: 0;
-  font-size: 14px;
-  line-height: 24px;
-  letter-spacing: -0.01em;
-  list-style-position: inside;
-}
-
-.main li:not(:last-of-type) {
-  margin-bottom: 8px;
 }
 
 .main code {
@@ -85,7 +71,7 @@ a.secondary {
 .footer {
   grid-row-start: 3;
   display: flex;
-  gap: 4px;
+  gap: 10px;
 }
 
 .footer a {

@@ -42,7 +42,7 @@ a {
 }
 
 input:nth-of-type(1) {
-  width: 420px; /* Widest bar at the top */
+  width: 420px;
 }
 
 input:nth-of-type(2) {
@@ -66,5 +66,35 @@ input:nth-of-type(6) {
 }
 
 input:nth-of-type(7) {
-  width: 300px; /* Narrowest bar at the bottom */
+  width: 300px;
+}
+
+@media (max-width: 375px) {
+  input:nth-of-type(1) {
+    width: 320px;
+  }
+  
+  input:nth-of-type(2) {
+    width: 300px;
+  }
+  
+  input:nth-of-type(3) {
+    width: 280px;
+  }
+  
+  input:nth-of-type(4) {
+    width: 260px;
+  }
+  
+  input:nth-of-type(5) {
+    width: 240px;
+  }
+  
+  input:nth-of-type(6) {
+    width: 220px;
+  }
+  
+  input:nth-of-type(7) {
+    width: 200px;
+  }
 }
