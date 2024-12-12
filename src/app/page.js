@@ -5,6 +5,7 @@ import Bar from "./components/bar-array.js";
 import MoveButton from './components/move-button.js'
 import { useRef, useState } from "react";
 import { Button, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle } from "@mui/material";
+import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
 
 export function Board() {
   const [chaserPosition, setChaserPosition] = useState(1);
@@ -120,13 +121,13 @@ export default function HomePage() {
         </DialogTitle>
         <DialogContent>
           <DialogContentText id="alert-dialog-description" sx={{ whiteSpace: "pre-wrap" }}>
-            To get started, enter your high, middle, and low bid amounts into the input bars. Once the team have decided their bid, click the corresponding button to start the game from that bid position.<br/>&nbsp;<br/>
+          <InfoOutlinedIcon fontSize="small" /> To get started, enter your high, middle, and low bid amounts into the input bars. Once the team have decided their bid, click the corresponding button to start the game from that bid position.<br/>&nbsp;<br/>
 
-            When the player gets a question correct, click Advance Player to award them space on the board.<br/>&nbsp;<br/>
+          <InfoOutlinedIcon fontSize="small" /> When the player gets a question correct, click Advance Player to award them space on the board.<br/>&nbsp;<br/>
 
-            When the Chaser gets a question correct, click the Advance Chaser button to move their position down the board.<br/>&nbsp;<br/>
+          <InfoOutlinedIcon fontSize="small" /> When the Chaser gets a question correct, click the Advance Chaser button to move their position down the board.<br/>&nbsp;<br/>
 
-            When the Chaser catches up to the player, Game Over!
+          <InfoOutlinedIcon fontSize="small" /> When the Chaser catches up to the player, Game Over!
           </DialogContentText>
         </DialogContent>
         <DialogActions>
