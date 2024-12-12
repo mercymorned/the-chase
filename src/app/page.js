@@ -39,7 +39,7 @@ export function Board() {
   const setAsStartingBidBar = (position, newOccupied) => {
     setBars(prevBars => {
       return prevBars.map(bar =>
-        bar.id === position ? { ...bar, startingBid: newOccupied } : bar
+        bar.id === position ? { ...bar, startingBid: newOccupied, isInput: false } : bar
       );
     });
   };

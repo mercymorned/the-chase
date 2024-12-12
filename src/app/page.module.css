@@ -196,6 +196,22 @@ a.secondary {
   border-bottom-style: hidden;
 }
 
+.startingBid {
+  margin-bottom: 5px;
+  height: 100px;
+  background: pink;
+  border-radius: 10px;
+  text-align: center;
+  line-height: 100px;
+  font-family: var(--font-geist-mono);
+  font-size: 48px;
+  color: white;
+  border-top-style: hidden;
+  border-right-style: hidden;
+  border-left-style: hidden;
+  border-bottom-style: hidden;
+}
+
 .inputBar {
   margin-bottom: 5px;
   height: 100px;
@@ -214,34 +230,6 @@ a.secondary {
 }
 .inputBar:focus {
   background-color: #00167c;
-}
-
-#1 {
-  width: 600px;
-}
-
-/* .squares {
-  width: 10%;
-  height: 100px;
-  line-height: 105px;
-  position: absolute;
-  left: 45%;
-  top: 10%;
-  transform: translateX(-45%);
-} */
-
-.squareinput {
-  width:250px;
-  background: transparent;
-  border-radius: 0;
-  font-family: 'Futura';
-  font-size: 48px;
-  text-align: center;
-  color: white;
-  /* border-top-style: hidden;
-  border-right-style: hidden;
-  border-left-style: hidden;
-  border-bottom-style: hidden; */
 }
 
 .button {
