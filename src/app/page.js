@@ -13,13 +13,13 @@ export function Board() {
   let [startingBidPosition, setStartingBidPosition] = useState(3);
 
   const [bars, setBars] = useState([
-    { id: 1, playerOccupied: false, chaserOccupied: false, isInput: false, startingBid: false },
-    { id: 2, playerOccupied: false, chaserOccupied: false, isInput: true, startingBid: false },
-    { id: 3, playerOccupied: false, chaserOccupied: false, isInput: true, startingBid: false },
-    { id: 4, playerOccupied: false, chaserOccupied: false, isInput: true, startingBid: false },
-    { id: 5, playerOccupied: false, chaserOccupied: false, isInput: false, startingBid: false },
-    { id: 6, playerOccupied: false, chaserOccupied: false, isInput: false, startingBid: false },
-    { id: 7, playerOccupied: false, chaserOccupied: false, isInput: false, startingBid: false }
+    { id: 1, playerOccupied: false, chaserOccupied: false, isInput: false, startingBid: false, value: '' },
+    { id: 2, playerOccupied: false, chaserOccupied: false, isInput: true, startingBid: false, value: 10 },
+    { id: 3, playerOccupied: false, chaserOccupied: false, isInput: true, startingBid: false, value: 5 },
+    { id: 4, playerOccupied: false, chaserOccupied: false, isInput: true, startingBid: false, value: 1 },
+    { id: 5, playerOccupied: false, chaserOccupied: false, isInput: false, startingBid: false, value: '' },
+    { id: 6, playerOccupied: false, chaserOccupied: false, isInput: false, startingBid: false, value: '' },
+    { id: 7, playerOccupied: false, chaserOccupied: false, isInput: false, startingBid: false, value: '' }
   ]);
 
   const updatePlayerBars = (position, newOccupied) => {
@@ -40,9 +40,9 @@ export function Board() {
 
   const setAsStartingBidBar = (position, newOccupied) => {
     setBars(prevBars => {
-      return prevBars.map(bar =>
-        bar.id === position ? { ...bar, startingBid: newOccupied, isInput: false } : bar
-      );
+      return prevBars.map(bar => 
+        bar.id === position ? { ...bar, startingBid: newOccupied, isInput: false } : bar && bar.id !== position ? { ...bar, value: '' } : bar
+    );
     });
   };
 
@@ -86,7 +86,7 @@ export function Board() {
       </header>
       <main className={styles.main}>
         {bars.map((bar, index) => (
-          <Bar key={(index)} barID={(bar.id)} isPlayerOccupied={(bar.playerOccupied)} isChaserOccupied={(bar.chaserOccupied)} isInput={(bar.isInput)} startingBid={(bar.startingBid)} />
+          <Bar key={(index)} barID={(bar.id)} isPlayerOccupied={(bar.playerOccupied)} isChaserOccupied={(bar.chaserOccupied)} isInput={(bar.isInput)} startingBid={(bar.startingBid)} value={(bar.value)} />
         ))}
       </main>
       <footer className={styles.footer}>

@@ -142,6 +142,7 @@ a.secondary {
   line-height: 100px;
   font-family: var(--font-geist-mono);
   font-size: 48px;
+  text-shadow: 2px 2px black;
   color: white;
   pointer-events: none;
   border-top-style: hidden;
@@ -159,6 +160,7 @@ a.secondary {
   line-height: 100px;
   font-family: var(--font-geist-mono);
   font-size: 48px;
+  text-shadow: 2px 2px black;
   color: white;
   border-top-style: hidden;
   border-right-style: hidden;
@@ -175,6 +177,7 @@ a.secondary {
   line-height: 100px;
   font-family: var(--font-geist-mono);
   font-size: 48px;
+  text-shadow: 2px 2px black;
   color: white;
   border-top-style: hidden;
   border-right-style: hidden;
