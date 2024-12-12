@@ -4,6 +4,7 @@ import styles from "./page.module.css";
 import Bar from "./components/bar-array.js";
 import MoveButton from './components/move-button.js'
 import { useRef, useState } from "react";
+import { Button, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle } from "@mui/material";
 
 export function Board() {
   const [chaserPosition, setChaserPosition] = useState(1);
@@ -100,7 +101,41 @@ export function Board() {
 
 export default function HomePage() {
 
+  const [open, setOpen] = useState(true);
+
+  const handleClose = () => {
+    setOpen(false);
+  };
+
   return (
-          <Board />
+    <>
+        <Dialog
+        open={open}
+        onClose={handleClose}
+        aria-labelledby="alert-dialog-title"
+        aria-describedby="alert-dialog-description"
+      >
+        <DialogTitle id="alert-dialog-title">
+          {"Are you ready to go Head to Head with the Chaser?"}
+        </DialogTitle>
+        <DialogContent>
+          <DialogContentText id="alert-dialog-description" sx={{ whiteSpace: "pre-wrap" }}>
+            To get started, enter your high, middle, and low bid amounts into the input bars. Once the team have decided their bid, click the corresponding button to start the game from that bid position.<br/>&nbsp;<br/>
+
+            When the player gets a question correct, click Advance Player to award them space on the board.<br/>&nbsp;<br/>
+
+            When the Chaser gets a question correct, click the Advance Chaser button to move their position down the board.<br/>&nbsp;<br/>
+
+            When the Chaser catches up to the player, Game Over!
+          </DialogContentText>
+        </DialogContent>
+        <DialogActions>
+          <Button onClick={handleClose} autoFocus>
+            PLAY
+          </Button>
+        </DialogActions>
+      </Dialog>
+      <Board />
+    </>
   );
 }
