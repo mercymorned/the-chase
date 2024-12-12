@@ -199,7 +199,7 @@ a.secondary {
 .startingBid {
   margin-bottom: 5px;
   height: 100px;
-  background: pink;
+  background: #00a9bb;
   border-radius: 10px;
   text-align: center;
   line-height: 100px;
@@ -210,6 +210,21 @@ a.secondary {
   border-right-style: hidden;
   border-left-style: hidden;
   border-bottom-style: hidden;
+  animation: pulse-animation 2s infinite;
+}
+@keyframes pulse-animation {
+  0% {
+    box-shadow: 0 0 0 0px rgba(245, 245, 245, 0.5);
+  }
+  100% {
+    box-shadow: 0 0 0 20px rgba(255, 255, 255, 0);
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  .startingBid {
+    filter: invert();
+  }
 }
 
 .inputBar {
