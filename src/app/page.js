@@ -11,6 +11,7 @@ export function Board() {
   const [chaserPosition, setChaserPosition] = useState(1);
   let [playerPosition, setPlayerPosition] = useState(3);
   let [startingBidPosition, setStartingBidPosition] = useState(3);
+  let [selectedBidValue, setSelectedBidValue] = useState();
 
   const [bars, setBars] = useState([
     { id: 1, playerOccupied: false, chaserOccupied: false, isInput: false, startingBid: false, value: '' },
@@ -25,7 +26,7 @@ export function Board() {
   const updatePlayerBars = (position, newOccupied) => {
     setBars(prevBars => {
       return prevBars.map(bar =>
-        bar.id === position ? { ...bar, playerOccupied: newOccupied } : bar && (bar.id === position -1) ? { ...bar, playerOccupied: false } : bar
+        bar.id === position ? { ...bar, playerOccupied: newOccupied, startingBid: false, value: selectedBidValue } : bar && (bar.id === position -1) ? { ...bar, playerOccupied: false, value:'' } : bar
       );
     });
   };
@@ -41,7 +42,7 @@ export function Board() {
   const setAsStartingBidBar = (position, newOccupied) => {
     setBars(prevBars => {
       return prevBars.map(bar => 
-        bar.id === position ? { ...bar, startingBid: newOccupied, isInput: false } : bar && bar.id !== position ? { ...bar, value: '' } : bar
+        bar.id === position ? { ...bar, startingBid: newOccupied, isInput: false, value: selectedBidValue } : bar && bar.id !== position ? { ...bar, value: '' } : bar
     );
     });
   };
@@ -61,6 +62,7 @@ export function Board() {
     setPlayerPosition(playerPosition - 1);
     setAsStartingBidBar((startingBidPosition - 1), true);
     setStartingBidPosition(startingBidPosition - 1);
+    setSelectedBidValue(10);
   };
 
   const selectMiddleBid = () => {
@@ -68,6 +70,7 @@ export function Board() {
     setPlayerPosition(playerPosition);
     setAsStartingBidBar((startingBidPosition), true);
     setStartingBidPosition(startingBidPosition);
+    setSelectedBidValue(5);
   };
 
   const selectLowBid = () => {
@@ -75,6 +78,7 @@ export function Board() {
     setPlayerPosition(playerPosition + 1);
     setAsStartingBidBar((startingBidPosition + 1), true);
     setStartingBidPosition(startingBidPosition + 1);
+    setSelectedBidValue(1);
   };
 
 
