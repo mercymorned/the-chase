@@ -166,6 +166,7 @@ a.secondary {
   border-right-style: hidden;
   border-left-style: hidden;
   border-bottom-style: hidden;
+  animation: pulse-animation 2s infinite;
 }
 
 .chaser {

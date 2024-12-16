@@ -25,7 +25,7 @@ export function Board() {
   const updatePlayerBars = (position, newOccupied) => {
     setBars(prevBars => {
       return prevBars.map(bar =>
-        bar.id === position ? { ...bar, playerOccupied: newOccupied } : bar
+        bar.id === position ? { ...bar, playerOccupied: newOccupied } : bar && (bar.id === position -1) ? { ...bar, playerOccupied: false } : bar
       );
     });
   };
