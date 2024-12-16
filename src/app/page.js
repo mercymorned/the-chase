@@ -3,7 +3,7 @@
 import styles from "./page.module.css";
 import Bar from "./components/bar-array.js";
 import MoveButton from './components/move-button.js'
-import { useRef, useState } from "react";
+import { useState } from "react";
 import { Button, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle } from "@mui/material";
 import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
 
